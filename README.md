@@ -1,3 +1,3 @@
-# messi_biostatistics_manuscript_code
+# Mediation with External Summary Statistic Information (MESSI) Code Repository
 
 test
