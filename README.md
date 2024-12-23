@@ -19,3 +19,4 @@ The simulation code for the congenial simulation settings is housed in the simul
 
 ## Data Example Code
 
+For the data example, data_example_function_eicosanoids_cyctochromep450_param_boot.R runs the code for the data examples and generates the Figure showing DE, IE, and TE estimation for the four different methods. Interval lengths are calculated in calculate_interval_lengths.Rmd.
