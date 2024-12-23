@@ -1,0 +1,287 @@
+---
+title: "Calculate Interval Lengths"
+author: "Jonathan Boss"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### MESSI Data Example
+
+95% confidence Intervals for the NDE (Visit 1, Cytochrome p450 Pathway):
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+
+setwd("/filepath/")
+
+load("protect_output_cytochromep450_param_boot.Rdata")
+
+summary.table <- rbind(subset(mbp.v1.out[[1]], param == "NDE"),
+                       subset(mibp.v1.out[[1]], param == "NDE"),
+                       subset(mbzp.v1.out[[1]], param == "NDE"))
+summary.table$method <- "Unconstrained"
+
+save.table <- summary.table
+
+summary.table <- rbind(subset(mbp.v1.out[[2]], param == "NDE"),
+                       subset(mibp.v1.out[[2]], param == "NDE"),
+                       subset(mbzp.v1.out[[2]], param == "NDE"))
+summary.table$method <- "MESSI (EB)"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v1.out[[3]], param == "NDE"),
+                       subset(mibp.v1.out[[3]], param == "NDE"),
+                       subset(mbzp.v1.out[[3]], param == "NDE"))
+summary.table$method <- "Discrete Selection"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v1.out[[4]], param == "NDE"),
+                       subset(mibp.v1.out[[4]], param == "NDE"),
+                       subset(mbzp.v1.out[[4]], param == "NDE"))
+summary.table$method <- "Hard Constraint"
+
+save.table <- rbind(save.table, summary.table)
+save.table$param <- "DE"
+save.table$int.length <- save.table$ucl95 - save.table$lcl95
+
+knitr::kable(save.table %>% filter(met.nm == "MBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
+```
+
+95% confidence Intervals for the NIE (Visit 1, Cytochrome p450 Pathway):
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+
+setwd("/filepath/")
+
+load("protect_output_cytochromep450_param_boot.Rdata")
+
+summary.table <- rbind(subset(mbp.v1.out[[1]], param == "NIE"),
+                       subset(mibp.v1.out[[1]], param == "NIE"),
+                       subset(mbzp.v1.out[[1]], param == "NIE"))
+summary.table$method <- "Unconstrained"
+
+save.table <- summary.table
+
+summary.table <- rbind(subset(mbp.v1.out[[2]], param == "NIE"),
+                       subset(mibp.v1.out[[2]], param == "NIE"),
+                       subset(mbzp.v1.out[[2]], param == "NIE"))
+summary.table$method <- "MESSI (EB)"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v1.out[[3]], param == "NIE"),
+                       subset(mibp.v1.out[[3]], param == "NIE"),
+                       subset(mbzp.v1.out[[3]], param == "NIE"))
+summary.table$method <- "Discrete Selection"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v1.out[[4]], param == "NIE"),
+                       subset(mibp.v1.out[[4]], param == "NIE"),
+                       subset(mbzp.v1.out[[4]], param == "NIE"))
+summary.table$method <- "Hard Constraint"
+
+save.table <- rbind(save.table, summary.table)
+save.table$param <- "IE"
+save.table$int.length <- save.table$ucl95 - save.table$lcl95
+
+knitr::kable(save.table %>% filter(met.nm == "MBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
+```
+
+95% confidence Intervals for the TE (Visit 1, Cytochrome p450 Pathway):
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+
+setwd("/filepath/")
+
+load("protect_output_cytochromep450_param_boot.Rdata")
+
+summary.table <- rbind(subset(mbp.v1.out[[1]], param == "TE"),
+                       subset(mibp.v1.out[[1]], param == "TE"),
+                       subset(mbzp.v1.out[[1]], param == "TE"))
+summary.table$method <- "Unconstrained"
+
+save.table <- summary.table
+
+summary.table <- rbind(subset(mbp.v1.out[[2]], param == "TE"),
+                       subset(mibp.v1.out[[2]], param == "TE"),
+                       subset(mbzp.v1.out[[2]], param == "TE"))
+summary.table$method <- "MESSI (EB)"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v1.out[[3]], param == "TE"),
+                       subset(mibp.v1.out[[3]], param == "TE"),
+                       subset(mbzp.v1.out[[3]], param == "TE"))
+summary.table$method <- "Discrete Selection"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v1.out[[4]], param == "TE"),
+                       subset(mibp.v1.out[[4]], param == "TE"),
+                       subset(mbzp.v1.out[[4]], param == "TE"))
+summary.table$method <- "Hard Constraint"
+
+save.table <- rbind(save.table, summary.table)
+save.table$param <- "TE"
+save.table$int.length <- save.table$ucl95 - save.table$lcl95
+
+knitr::kable(save.table %>% filter(met.nm == "MBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
+```
+
+95% confidence Intervals for the NDE (Visit 2, Cytochrome p450 Pathway):
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+setwd("/filepath/")
+
+load("protect_output_cytochromep450_param_boot.Rdata")
+
+summary.table <- rbind(subset(mbp.v2.out[[1]], param == "NDE"),
+                       subset(mibp.v2.out[[1]], param == "NDE"),
+                       subset(mbzp.v2.out[[1]], param == "NDE"))
+summary.table$method <- "Unconstrained"
+
+save.table <- summary.table
+
+summary.table <- rbind(subset(mbp.v2.out[[2]], param == "NDE"),
+                       subset(mibp.v2.out[[2]], param == "NDE"),
+                       subset(mbzp.v2.out[[2]], param == "NDE"))
+summary.table$method <- "MESSI (EB)"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v2.out[[3]], param == "NDE"),
+                       subset(mibp.v2.out[[3]], param == "NDE"),
+                       subset(mbzp.v2.out[[3]], param == "NDE"))
+summary.table$method <- "Discrete Selection"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v2.out[[4]], param == "NDE"),
+                       subset(mibp.v2.out[[4]], param == "NDE"),
+                       subset(mbzp.v2.out[[4]], param == "NDE"))
+summary.table$method <- "Hard Constraint"
+
+save.table <- rbind(save.table, summary.table)
+save.table$param <- "DE"
+save.table$int.length <- save.table$ucl95 - save.table$lcl95
+
+knitr::kable(save.table %>% filter(met.nm == "MBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
+```
+
+95% confidence Intervals for the NIE (Visit 2, Cytochrome p450 Pathway):
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+setwd("/filepath/")
+
+load("protect_output_cytochromep450_param_boot.Rdata")
+
+summary.table <- rbind(subset(mbp.v2.out[[1]], param == "NIE"),
+                       subset(mibp.v2.out[[1]], param == "NIE"),
+                       subset(mbzp.v2.out[[1]], param == "NIE"))
+summary.table$method <- "Unconstrained"
+
+save.table <- summary.table
+
+summary.table <- rbind(subset(mbp.v2.out[[2]], param == "NIE"),
+                       subset(mibp.v2.out[[2]], param == "NIE"),
+                       subset(mbzp.v2.out[[2]], param == "NIE"))
+summary.table$method <- "MESSI (EB)"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v2.out[[3]], param == "NIE"),
+                       subset(mibp.v2.out[[3]], param == "NIE"),
+                       subset(mbzp.v2.out[[3]], param == "NIE"))
+summary.table$method <- "Discrete Selection"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v2.out[[4]], param == "NIE"),
+                       subset(mibp.v2.out[[4]], param == "NIE"),
+                       subset(mbzp.v2.out[[4]], param == "NIE"))
+summary.table$method <- "Hard Constraint"
+
+save.table <- rbind(save.table, summary.table)
+save.table$param <- "IE"
+save.table$int.length <- save.table$ucl95 - save.table$lcl95
+
+knitr::kable(save.table %>% filter(met.nm == "MBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
+```
+
+95% confidence Intervals for the TE (Visit 2, Cytochrome p450 Pathway):
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+setwd("/filepath/")
+
+load("protect_output_cytochromep450_param_boot.Rdata")
+
+summary.table <- rbind(subset(mbp.v2.out[[1]], param == "TE"),
+                       subset(mibp.v2.out[[1]], param == "TE"),
+                       subset(mbzp.v2.out[[1]], param == "TE"))
+summary.table$method <- "Unconstrained"
+
+save.table <- summary.table
+
+summary.table <- rbind(subset(mbp.v2.out[[2]], param == "TE"),
+                       subset(mibp.v2.out[[2]], param == "TE"),
+                       subset(mbzp.v2.out[[2]], param == "TE"))
+summary.table$method <- "MESSI (EB)"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v2.out[[3]], param == "TE"),
+                       subset(mibp.v2.out[[3]], param == "TE"),
+                       subset(mbzp.v2.out[[3]], param == "TE"))
+summary.table$method <- "Discrete Selection"
+
+save.table <- rbind(save.table, summary.table)
+
+summary.table <- rbind(subset(mbp.v2.out[[4]], param == "TE"),
+                       subset(mibp.v2.out[[4]], param == "TE"),
+                       subset(mbzp.v2.out[[4]], param == "TE"))
+summary.table$method <- "Hard Constraint"
+
+save.table <- rbind(save.table, summary.table)
+save.table$param <- "TE"
+save.table$int.length <- save.table$ucl95 - save.table$lcl95
+
+knitr::kable(save.table %>% filter(met.nm == "MBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
+
+knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
+```
