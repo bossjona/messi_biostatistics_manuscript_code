@@ -1,0 +1,64 @@
+Variable Name,Pathway Group,Full Name,Abbreviation
+BC_PGE1,Cyclooxygenase Pathway,Bicyclo Prostaglandin E1,BCPGE1 
+DiPGD2,Cyclooxygenase Pathway,"13,14-dihydro-15-keto Prostaglandin D2","13,14DHK-PGD2 "
+DiPGE2,Cyclooxygenase Pathway,"13,14-dihydro-15-keto Prostaglandin E2","13,14-D-PGE2"
+DiPGJ2,Cyclooxygenase Pathway,"13,14-dihydro-15-keto Prostaglandin J2","13,14-D-PGJ2"
+PGA2,Cyclooxygenase Pathway,Prostaglandin A2,PGA2 
+PGD2,Cyclooxygenase Pathway,Prostaglandin D2,PGD2
+PGD3,Cyclooxygenase Pathway,Prostaglandin D3Ê,PGD3 
+PGE1,Cyclooxygenase Pathway,Prostaglandin E1 (power),PGE1 
+PGE2,Cyclooxygenase Pathway,Prostaglandin E2,PGE2
+PGE3,Cyclooxygenase Pathway,Prostaglandin E3,PGE3 
+PGJ2,Cyclooxygenase Pathway,Prostaglandin J2,PGJ2 
+TXB2,Cyclooxygenase Pathway,Thromboxane B2,TXB2
+X9_oxoODE,Cyclooxygenase Pathway,9-OxoODE,9-OxoODE
+BC_PGE2,Cyclooxygenase Pathway,Bicyclo Prostaglandin E2,BCPGE2 
+DeoPGJ2,Cyclooxygenase Pathway,"15-deoxy-_12,14-Prostaglandin J271","15DO12,14-PGJ2 "
+DiPGF2,Cyclooxygenase Pathway,"13,14-dihydro-15-keto Prostaglandin F2Î±","13,14DHK-PGF2a* "
+iPF2a,Cyclooxygenase Pathway,5-iPF2a-VI,5-iPF2a-VI
+PGB2,Cyclooxygenase Pathway,Prostaglandin B2,PGB2
+X11b_PGE2,Cyclooxygenase Pathway,11beta-Prostaglandin E2,11b-PGE2
+X6kPGF1a,Cyclooxygenase Pathway,6-keto Prostaglandin F1a,6-keto-PGF1a
+X8iPGF2a,Cyclooxygenase Pathway,8-iso Prostaglandin F2a,8-iso-PGF-2a
+X11_12_DHET,Cytochrome p450 Pathway,"(±)11,12-DHET","11,12-DHET "
+X11_12_EET,Cytochrome p450 Pathway,11(12)-EET,11(12)-EET 
+X11HETE,Cytochrome p450 Pathway,11(S)-HETE,11-HETE
+X12_13_DiHOME,Cytochrome p450 Pathway,"(±)12,13-DiHOME","12,13-DiHOME "
+X12EpoME,Cytochrome p450 Pathway,12(13)-EpOME,12(13)-EpoME 
+X14_15_ETE,Cytochrome p450 Pathway,14(15)-EET,14(15)-EET 
+X16HETE,Cytochrome p450 Pathway,16(S)-HETE,16-HETE
+X17HETE,Cytochrome p450 Pathway,17(S)-HETE,17-HETE
+X18HETE,Cytochrome p450 Pathway,(±)18-HETE,18-HETE
+X20_CAA,Cytochrome p450 Pathway,20-carboxy Arachidonic Acid,CAA
+X20_HETE,Cytochrome p450 Pathway,20(S)-HETE ,20-HETE 
+X5_6_DHET,Cytochrome p450 Pathway,"(±)5,6-DHET","5,6-DHET "
+X5_6_EET,Cytochrome p450 Pathway,5(6)-EET,5(6)-EET 
+X8_9_DHET,Cytochrome p450 Pathway,"(±)8,9-DHET","8,9-DHET "
+X8_9_EET,Cytochrome p450 Pathway,8(9)-EET,8(9)-EET 
+X9_10_DiHOME,Cytochrome p450 Pathway,"(±)9,10-DiHOME","9,10-DiHOME "
+X9EpoME,Cytochrome p450 Pathway,9(10)-EpOME,9(10)-EpoME 
+X9S_HODE,Cytochrome p450 Pathway,9s-HODE,9S-HODE 
+LTB4,Lipoxygenase Pathway,Leukotriene B4,LTB4
+LTC4.ME,Lipoxygenase Pathway,Leukotriene C4Â methyl ester,LTC4ME
+LTD4,Lipoxygenase Pathway,Leukotriene D4,LTD4
+LTE4,Lipoxygenase Pathway,Leukotriene E4,LTE4
+RVD1,Lipoxygenase Pathway,Resolvin D1            ,RVD1
+RVD2,Lipoxygenase Pathway,Resolvin D2             ,RVD2
+X12_HETE,Lipoxygenase Pathway,12(S)-HETE ,12-HETE 
+X12oxoETE,Lipoxygenase Pathway,12-OxoETE ,12-oxoETE 
+X13_oxoODE,Lipoxygenase Pathway,13-OxoODE,13-oxoODE 
+X13S_HODE,Lipoxygenase Pathway,13S-HODE ,13S-HODE 
+X15_HETE,Lipoxygenase Pathway,15(S)-HETE ,15-HETE 
+X15oxoETE,Lipoxygenase Pathway,15-OxoETE ,15-oxoETE 
+X5_HETE,Lipoxygenase Pathway,5(S)-HETE ,5-HETE 
+X5oxoETE,Lipoxygenase Pathway,5-OxoETE ,5-oxoETE 
+X8HETE,Lipoxygenase Pathway,8(S)-HETE,8-HETE 
+LPXB4,Lipoxygenase Pathway,"5(s),14(r)-Lipoxin B4",LPXB4
+LTB3,Lipoxygenase Pathway,Leukotriene B3,LTB3
+X19HETE,Lipoxygenase Pathway,(±)19-HETE,19-HETE
+X9HETE,Lipoxygenase Pathway,9(s)-HETE,9-HETE
+AA,Parent Compound,Arachidonic Acid,AA
+aLA,Parent Compound,alpha-Linolenic Acid,a*LA
+DHA,Parent Compound,Docosahexaenoic Acid,DHA
+EPA,Parent Compound,Eicosapentaenoic Acid,EPA
+LA,Parent Compound,Linoleic Acid,LA
