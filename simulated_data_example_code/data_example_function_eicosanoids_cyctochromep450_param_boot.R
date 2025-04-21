@@ -459,11 +459,12 @@ ggplot.df$plot.nm <- factor(ggplot.df$plot.nm, levels = c("Unconstrained TE", "M
 
 ann_box <- data.frame(xmin = c(-0.6,-0.6), xmax = c(0.2,0.2), ymin = rep("Unconstrained IE", 2), ymax = rep("Hard Constraint IE", 2), label = c("MBzP V1", "MBzP V2"))
 
-pdf("protect_results_cytochromep450_param_boot.pdf", onefile = FALSE, height = 8, width = 10)
+pdf("protect_results_cytochromep450_param_boot_simulate.pdf", onefile = FALSE, height = 8, width = 10)
 ggplot(ggplot.df, aes(x = est, y = plot.nm, xmin = lcl95, xmax = ucl95, color = factor(color.sig))) +
   geom_pointrange(shape = 16, fill = "black") +
   geom_vline(xintercept = 0, linetype = 3) + facet_grid(~ label) + theme_bw() +
   scale_color_manual(values = c("black","red2")) +
+  scale_x_continuous(breaks = c(-0.9, -0.6, -0.3, 0, 0.3), limits = c(-0.9,0.3)) +
   theme(axis.title.y = element_blank(), axis.title.x = element_blank(), plot.title = element_text(hjust = 0.5),
         legend.position = "none", panel.spacing.x = unit(8, "mm"))
 dev.off()
