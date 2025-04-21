@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### MESSI Data Example
 
-95% confidence Intervals for the NDE (Visit 1, Cytochrome p450 Pathway):
+95% confidence Intervals for the DE (Visit 1, Cytochrome p450 Pathway):
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
@@ -60,7 +60,7 @@ knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
 knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
 ```
 
-95% confidence Intervals for the NIE (Visit 1, Cytochrome p450 Pathway):
+95% confidence Intervals for the IE (Visit 1, Cytochrome p450 Pathway):
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
@@ -154,7 +154,7 @@ knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
 knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
 ```
 
-95% confidence Intervals for the NDE (Visit 2, Cytochrome p450 Pathway):
+95% confidence Intervals for the DE (Visit 2, Cytochrome p450 Pathway):
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 setwd("/filepath/")
@@ -198,7 +198,7 @@ knitr::kable(save.table %>% filter(met.nm == "MIBP"), digits = 3)
 knitr::kable(save.table %>% filter(met.nm == "MBZP"), digits = 3)
 ```
 
-95% confidence Intervals for the NIE (Visit 2, Cytochrome p450 Pathway):
+95% confidence Intervals for the IE (Visit 2, Cytochrome p450 Pathway):
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 setwd("/filepath/")
